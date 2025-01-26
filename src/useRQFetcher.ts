@@ -1,5 +1,3 @@
-import { commonResponse } from "./interfaces/commonResponse";
-// import API from "./utils/interceptor";
 import {
   UseQueryResult,
   useQuery,
@@ -8,7 +6,7 @@ import {
 import { AxiosHeaders, AxiosInstance, Method, RawAxiosRequestHeaders } from "axios";
 
 
-export const useRQFetcher = <TData, TError = commonResponse>({
+export const useRQFetcher = <TData, TError >({
   API,
   url,
   queryKey,

@@ -1,7 +1,6 @@
-import { commonResponse } from "./interfaces/commonResponse";
 import { UseQueryOptions } from "@tanstack/react-query";
 import { AxiosHeaders, AxiosInstance, Method, RawAxiosRequestHeaders } from "axios";
-export declare const useRQFetcher: <TData, TError = commonResponse<any>>({ API, url, queryKey, headers, baseURL, params, pathParams, ...rest }: UseQueryOptions<TData, TError> & {
+export declare const useRQFetcher: <TData, TError>({ API, url, queryKey, headers, baseURL, params, pathParams, ...rest }: UseQueryOptions<TData, TError> & {
     API: AxiosInstance;
     url: string;
     baseURL?: string;

@@ -1,4 +1,3 @@
-// import API from "./utils/interceptor";
 import { useQuery, } from "@tanstack/react-query";
 export const useRQFetcher = ({ API, url, queryKey, headers = {}, baseURL = undefined, params, pathParams = {}, ...rest }) => {
     const queryFn = async () => {
