@@ -1,5 +1,5 @@
-import { commonResponse } from "@/interfaces/commonResponse";
-import API from "@/utils/interceptor";
+import { commonResponse } from "./interfaces/commonResponse";
+import API from "./utils/interceptor";
 import {
   UseQueryResult,
   useQuery,
