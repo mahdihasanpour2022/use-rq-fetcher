@@ -1,11 +1,12 @@
 import { commonResponse } from "./interfaces/commonResponse";
-import API from "./utils/interceptor";
+// import API from "./utils/interceptor";
 import {
   UseQueryResult,
   useQuery,
   UseQueryOptions,
 } from "@tanstack/react-query";
-import { AxiosHeaders, Method, RawAxiosRequestHeaders } from "axios";
+import Axios, { AxiosHeaders, Method, RawAxiosRequestHeaders } from "axios";
+
 
 export const useRQFetcher = <TData, TError = commonResponse>({
   url,
@@ -31,7 +32,7 @@ UseQueryOptions<TData, TError> & {
   pathParams?: { [key: string]: any };
 }) => {
   const queryFn = async () => {
-    const { data } = await API.get(url, {
+    const { data } = await Axios.get(url, {
       baseURL,
       headers,
       params,
