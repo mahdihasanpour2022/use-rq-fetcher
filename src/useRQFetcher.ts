@@ -1,5 +1,5 @@
 import { commonResponse } from "./interfaces/commonResponse";
-// import API from "./utils/interceptor";
+import API from "@/utils/interceptor";
 import {
   UseQueryResult,
   useQuery,
@@ -32,7 +32,7 @@ UseQueryOptions<TData, TError> & {
   pathParams?: { [key: string]: any };
 }) => {
   const queryFn = async () => {
-    const { data } = await Axios.get(url, {
+    const { data } = await API.get(url, {
       baseURL,
       headers,
       params,
