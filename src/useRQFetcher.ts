@@ -1,14 +1,15 @@
 import { commonResponse } from "./interfaces/commonResponse";
-import API from "@/utils/interceptor";
+// import API from "./utils/interceptor";
 import {
   UseQueryResult,
   useQuery,
   UseQueryOptions,
 } from "@tanstack/react-query";
-import Axios, { AxiosHeaders, Method, RawAxiosRequestHeaders } from "axios";
+import { AxiosHeaders, AxiosInstance, Method, RawAxiosRequestHeaders } from "axios";
 
 
 export const useRQFetcher = <TData, TError = commonResponse>({
+  API,
   url,
   queryKey,
   headers = {},
@@ -18,6 +19,7 @@ export const useRQFetcher = <TData, TError = commonResponse>({
   ...rest
 }:
 UseQueryOptions<TData, TError> & {
+  API:AxiosInstance,
   url: string;
   baseURL?: string;
   headers?:
