@@ -1,6 +1,6 @@
 {
   "name": "use-rq-fetcher",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "the hook for get data with axios and react query",
   "main": "index.js",
   "scripts": {
