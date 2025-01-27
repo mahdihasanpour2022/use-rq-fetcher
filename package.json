@@ -3,6 +3,7 @@
   "version": "1.0.9",
   "description": "the hook for get data with axios and react query",
   "main": "dist/useRQFetcher.js",
+  
   "module": "dist/useRQFetcher.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +15,13 @@
   },
   "keywords": [
     "react",
-    "hook"
+    "hook",
+    "react-query",
+    "axios",
+    "custom-hook",
+    "typescript",
+    "api-fetcher",
+    "data-fetching"
   ],
   "author": "mahdihasanpour",
   "license": "MIT",
